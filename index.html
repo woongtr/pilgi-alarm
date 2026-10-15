@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>채용 필기 알림</title>
+<meta name="theme-color" content="#2563eb">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="필기알림">
+<style>
+:root{--bg:#f5f7fb;--card:#fff;--text:#111827;--sub:#6b7280;--line:#e5e7eb;--blue:#2563eb;--red:#dc2626;--orange:#ea580c;--green:#16a34a;--chip:#eef2ff}
+@media (prefers-color-scheme:dark){:root{--bg:#0f172a;--card:#1e293b;--text:#f1f5f9;--sub:#94a3b8;--line:#334155;--chip:#1e3a8a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;padding-bottom:calc(80px + env(safe-area-inset-bottom))}
+header{position:sticky;top:0;z-index:5;background:var(--blue);color:#fff;padding:calc(14px + env(safe-area-inset-top)) 16px 12px}
+header h1{margin:0;font-size:19px}
+header p{margin:4px 0 0;font-size:13px;opacity:.85}
+nav{display:flex;gap:6px;padding:10px 16px;overflow-x:auto;background:var(--bg);position:sticky;top:62px;z-index:4}
+nav button,.chip{border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:7px 13px;font-size:14px;white-space:nowrap}
+nav button.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+main{padding:0 16px}
+.banner{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin:10px 0;font-size:14px}
+.banner button{margin-top:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 14px;margin:10px 0;display:flex;gap:12px;align-items:center}
+.dd{min-width:62px;text-align:center;font-weight:800;font-size:18px;border-radius:10px;padding:8px 4px;background:var(--chip);color:var(--blue)}
+.dd.hot{background:#fee2e2;color:var(--red)}.dd.warm{background:#ffedd5;color:var(--orange)}.dd.past{background:var(--line);color:var(--sub)}
+.info{flex:1;min-width:0}
+.info b{font-size:16px}.info .t{font-size:13px;color:var(--blue);font-weight:600;margin-left:6px}
+.info .s{font-size:13px;color:var(--sub);margin-top:3px;overflow:hidden;text-overflow:ellipsis}
+.tag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:6px;background:#fef3c7;color:#92400e;margin-left:4px}
+.empty{text-align:center;color:var(--sub);padding:40px 10px;font-size:14px;line-height:1.6}
+.fab{position:fixed;right:18px;bottom:calc(22px + env(safe-area-inset-bottom));width:58px;height:58px;border-radius:50%;border:0;background:var(--blue);color:#fff;font-size:30px;box-shadow:0 6px 18px rgba(37,99,235,.4)}
+.btn{border:0;background:var(--blue);color:#fff;border-radius:10px;padding:10px 14px;font-size:15px}
+.btn.ghost{background:transparent;color:var(--blue);border:1px solid var(--blue)}
+.btn.red{background:var(--red)}
+dialog{border:0;border-radius:16px;padding:0;width:min(520px,94vw);background:var(--card);color:var(--text)}
+dialog::backdrop{background:rgba(0,0,0,.45)}
+dialog form{padding:18px}
+dialog h2{margin:0 0 12px;font-size:18px}
+label{display:block;font-size:13px;color:var(--sub);margin:10px 0 4px}
+input,select,textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:10px;font-size:16px;background:var(--bg);color:var(--text)}
+.row{display:flex;gap:8px}.row>*{flex:1}
+.actions{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.links a{display:flex;justify-content:space-between;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:8px 0;color:var(--text);text-decoration:none}
+.links a span{color:var(--sub);font-size:13px}
+h3{font-size:15px;margin:18px 0 6px}
+.filters{display:flex;gap:6px;margin:4px 0}
+.filters .chip.on{background:var(--text);color:var(--bg)}
+small{color:var(--sub)}
+</style>
+</head>
+<body>
+<header>
+  <h1>채용 필기 알림</h1>
+  <p id="summary">불러오는 중…</p>
+</header>
+<nav id="tabs">
+  <button data-tab="soon" class="on">임박</button>
+  <button data-tab="all">전체 예정</button>
+  <button data-tab="past">지난 일정</button>
+  <button data-tab="notices">새 공고</button>
+  <button data-tab="links">공고 확인</button>
+  <button data-tab="settings">설정</button>
+</nav>
+<main id="main"></main>
+<button class="fab" id="addBtn" aria-label="일정 추가">+</button>
+
+<dialog id="dlg">
+  <form method="dialog" id="form">
+    <h2 id="dlgTitle">일정 추가</h2>
+    <label>기업</label>
+    <input name="company" list="companyList" required placeholder="예: 코레일">
+    <datalist id="companyList"></datalist>
+    <label>구분</label>
+    <select name="type">
+      <option>필기시험</option><option>인적성검사</option><option>서류접수 시작</option><option>서류 마감</option><option>서류 발표</option><option>면접</option><option>기타</option>
+    </select>
+    <div class="row">
+      <div><label>날짜</label><input type="date" name="date" required></div>
+      <div><label>시간 (선택)</label><input type="time" name="time"></div>
+    </div>
+    <label>메모 (장소, 준비물 등)</label>
+    <input name="memo" placeholder="예: 서울 OO고, 수험표 출력">
+    <label>공고 링크 (선택)</label>
+    <input name="url" type="url" placeholder="https://">
+    <label style="display:flex;gap:8px;align-items:center;color:var(--text)"><input type="checkbox" name="tentative" style="width:auto"> 예상 일정 (공고 확정 전)</label>
+    <div class="actions">
+      <button class="btn" value="save">저장</button>
+      <button class="btn ghost" value="cancel" formnovalidate>취소</button>
+      <button class="btn ghost" value="ics" id="icsOne" formnovalidate>캘린더에 추가</button>
+      <button class="btn red" value="delete" id="delBtn" formnovalidate>삭제</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+name: 공공기관 공고 받기
+
+on:
+  schedule:
+    - cron: "0 21 * * *"   # 매일 오전 6시 (한국시간)
+    - cron: "0 3 * * *"    # 매일 낮 12시 (한국시간)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: 잡알리오 공고 받기
+        env:
+          ALIO_KEY: ${{ secrets.ALIO_KEY }}
+        run: python scripts/fetch_alio.py
+      - name: 바뀐 게 있으면 저장
+        run: |
+          git config user.name "notice-bot"
+          git config user.email "notice-bot@users.noreply.github.com"
+          git add notices.json
+          git diff --cached --quiet || git commit -m "공고 갱신 $(TZ=Asia/Seoul date '+%Y-%m-%d %H:%M')"
+          git push
