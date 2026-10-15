@@ -1,1 +1,138 @@
-{"updated": "", "total": 0, "notices": []}
+{
+ "updated": "2026-10-15 16:39",
+ "total": 517,
+ "notices": [
+  {
+   "id": "306032",
+   "inst": "코레일테크(주)",
+   "title": "2027년 제1차 공무직사원 채용 공고",
+   "start": "2026-10-15",
+   "end": "2026-10-29",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306032",
+   "src": "https://korailtech.cairos.co.kr/korailtech/",
+   "kind": "신입+경력",
+   "hire": "무기계약직",
+   "people": 597
+  },
+  {
+   "id": "305913",
+   "inst": "한국전력공사",
+   "title": "기간제근로자(대체인력)채용공고 (인천본부)",
+   "start": "2026-10-12",
+   "end": "2026-10-26",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=305913",
+   "src": "http://recruit.kepco.co.kr/sangsi",
+   "kind": "신입",
+   "hire": "비정규직",
+   "people": 5
+  },
+  {
+   "id": "305895",
+   "inst": "한국전력공사",
+   "title": "기간제근로자(대체인력) 채용공고[대전세종충남본부 공주청양지사] (재공고)",
+   "start": "2026-10-12",
+   "end": "2026-10-26",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=305895",
+   "src": "http://recruit.kepco.co.kr/sangsi",
+   "kind": "신입",
+   "hire": "비정규직",
+   "people": 1
+  },
+  {
+   "id": "305874",
+   "inst": "한국전력공사",
+   "title": "2026년 하반기 한전 전력연구원 위촉연구원 채용공고",
+   "start": "2026-10-12",
+   "end": "2026-10-27",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=305874",
+   "src": "https://kepri.saramin.co.kr",
+   "kind": "신입+경력",
+   "hire": "비정규직",
+   "people": 29
+  },
+  {
+   "id": "305828",
+   "inst": "한국전력공사",
+   "title": "기간제근로자(대체인력) 채용 공고 [경남본부 통영지사]",
+   "start": "2026-10-08",
+   "end": "2026-10-22",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=305828",
+   "src": "http://recruit.kepco.co.kr/sangsi",
+   "kind": "신입",
+   "hire": "비정규직",
+   "people": 1
+  },
+  {
+   "id": "305824",
+   "inst": "한국전력공사",
+   "title": "기간제근로자(대체인력) 채용공고 [경기본부]",
+   "start": "2026-10-08",
+   "end": "2026-10-22",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=305824",
+   "src": "http://recruit.kepco.co.kr/sangsi",
+   "kind": "신입",
+   "hire": "비정규직",
+   "people": 5
+  },
+  {
+   "id": "305823",
+   "inst": "한국전력공사",
+   "title": "기간제근로자(대체인력) 채용공고[대구본부]",
+   "start": "2026-10-08",
+   "end": "2026-10-23",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=305823",
+   "src": "http://recruit.kepco.co.kr/sangsi",
+   "kind": "신입",
+   "hire": "비정규직",
+   "people": 1
+  },
+  {
+   "id": "305816",
+   "inst": "한국철도공사",
+   "title": "2026년 제2차 한국철도공사 국가 R&D 위촉연구원 채용공고",
+   "start": "2026-10-08",
+   "end": "2026-10-22",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=305816",
+   "src": "http://info.korail.com/",
+   "kind": "신입+경력",
+   "hire": "비정규직",
+   "people": 2
+  },
+  {
+   "id": "305774",
+   "inst": "코레일테크(주)",
+   "title": "2026년 제2차 일반직사원(경력직 및 채용형인턴) 채용 공고",
+   "start": "2026-10-07",
+   "end": "2026-10-21",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=305774",
+   "src": "https://korailtech.cairos.co.kr/korailtech/",
+   "kind": "신입+경력",
+   "hire": "정규직,청년인턴(채용형)",
+   "people": 19
+  },
+  {
+   "id": "305744",
+   "inst": "한국전력공사",
+   "title": "한국전력 럭비단 기간제 운동선수 채용공고",
+   "start": "2026-10-06",
+   "end": "2026-10-20",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=305744",
+   "src": "http://recruit.kepco.co.kr/sangsi",
+   "kind": "신입",
+   "hire": "비정규직",
+   "people": 2
+  },
+  {
+   "id": "305743",
+   "inst": "한국전력공사",
+   "title": "한국전력 육상단 기간제 운동선수 채용공고",
+   "start": "2026-10-06",
+   "end": "2026-10-20",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=305743",
+   "src": "http://recruit.kepco.co.kr/sangsi",
+   "kind": "신입",
+   "hire": "비정규직",
+   "people": 1
+  }
+ ]
+}
