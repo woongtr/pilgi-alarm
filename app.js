@@ -41,8 +41,10 @@ async function kvSet(k, v) {
   return new Promise(ok => { const t = d.transaction('kv', 'readwrite'); t.objectStore('kv').put(v, k); t.oncomplete = ok; t.onerror = ok; });
 }
 
+// 기간제·대체인력 등은 기본으로 숨김 (설정에서 '모든 공고 보기'로 변경)
+const isMinor = n => /비정규/.test(n.hire || '') || /(기간제|대체인력|대체 인력|위촉|계약직|체험형|육아휴직)/.test(n.title || '');
 let events = [];
-let settings = { days: [7, 3, 1, 0], filter: '전체' };
+let settings = { days: [7, 3, 1, 0], filter: '전체', showAll: false };
 let tab = location.hash === '#notices' ? 'notices' : 'soon';
 let notices = { updated: '', notices: [] };
 let seenIds = [];
@@ -121,9 +123,15 @@ function notifBanner() {
 }
 
 function renderNotices(m) {
-  const list = notices.notices || [];
+  const all = notices.notices || [];
+  const isCorp = n => n.source === 'saramin';
+  const base = settings.showAll ? all : all.filter(n => !isMinor(n));
+  const list = settings.filter === '공기업' ? base.filter(n => !isCorp(n)) : settings.filter === '대기업' ? base.filter(isCorp) : base;
+  const hidden = all.length - base.length;
   let html = notifBanner();
-  html += `<p><small>잡알리오에 올라온 관심 공공기관 공고예요. 하루 두 번(오전 6시, 낮 12시) 자동으로 갱신돼요.${notices.updated ? ' 마지막 갱신 ' + esc(notices.updated) : ''}</small></p>`;
+  html += `<div class="filters">${['전체', '공기업', '대기업'].map(f => `<button class="chip ${settings.filter === f ? 'on' : ''}" data-filter="${f}">${f}</button>`).join('')}</div>`;
+  html += `<p><small>공공기관(잡알리오)과 대기업(사람인) 신입 공고예요. 하루 두 번(오전 6시, 낮 12시) 자동으로 갱신돼요.${notices.updated ? ' 마지막 갱신 ' + esc(notices.updated) : ''}</small></p>`;
+  html += `<p><button class="chip ${settings.showAll ? 'on' : ''}" data-showall="1">${settings.showAll ? '모든 공고 보는 중' : `기간제·대체인력 등 ${hidden}건 숨김 · 모두 보기`}</button></p>`;
   if (!notices.updated) {
     html += `<div class="empty">아직 자동 수집 결과가 없어요.<br>GitHub 설정을 마치면 여기에 공고가 떠요.<br><small>(설치 안내서 2단계 참고)</small></div>`;
   } else if (!list.length) {
@@ -133,9 +141,9 @@ function renderNotices(m) {
       const left = n.end ? dday(n.end) : null;
       const added = events.some(e => e.noticeId === n.id);
       return `<div class="card info" style="display:block">
-        <div><b>${esc(n.inst)}</b>${!seenIds.includes(n.id) ? '<span class="tag" style="background:#dcfce7;color:#166534">NEW</span>' : ''}${left !== null ? `<span class="t">${left >= 0 ? '마감 ' + ddLabel(left) : '마감됨'}</span>` : ''}</div>
+        <div><b>${esc(n.inst)}</b>${n.source === 'saramin' ? '<span class="tag" style="background:#e0e7ff;color:#3730a3">대기업</span>' : ''}${!seenIds.includes(n.id) ? '<span class="tag" style="background:#dcfce7;color:#166534">NEW</span>' : ''}${left !== null ? `<span class="t">${left >= 0 ? '마감 ' + ddLabel(left) : '마감됨'}</span>` : ''}</div>
         <div class="s" style="margin:4px 0;font-size:14px;color:var(--text)">${esc(n.title)}</div>
-        <div class="s">접수 ${n.start ? fmtDate(n.start) : '?'} ~ ${n.end ? fmtDate(n.end) : '?'}</div>
+        ${n.source === 'saramin' ? '<div class="s">출처: 사람인</div>' : ''}<div class="s">접수 ${n.start ? fmtDate(n.start) : '?'} ~ ${n.end ? fmtDate(n.end) : '?'}${[n.kind, n.hire, n.people ? n.people + '명' : ''].filter(Boolean).map(x => ' · ' + esc(x)).join('')}</div>
         <div class="actions" style="margin-top:8px">
           <a class="btn ghost" style="text-decoration:none;font-size:14px;padding:7px 12px" href="${esc(n.url)}" target="_blank" rel="noopener">공고 보기</a>
           <button class="btn" style="font-size:14px;padding:7px 12px" data-notice="${esc(n.id)}" ${added ? 'disabled' : ''}>${added ? '일정에 추가됨' : '마감일 일정에 추가'}</button>
@@ -154,7 +162,7 @@ async function loadNotices() {
     if (r.ok) { notices = await r.json(); }
   } catch (_) { notices = (await kvGet('notices')) || notices; }
   seenIds = (await kvGet('seenNotices')) || [];
-  const newCount = (notices.notices || []).filter(n => !seenIds.includes(n.id)).length;
+  const newCount = (notices.notices || []).filter(n => !seenIds.includes(n.id) && (settings.showAll || !isMinor(n))).length;
   const btn = document.querySelector('[data-tab=notices]');
   if (btn) btn.textContent = newCount ? `새 공고 ${newCount}` : '새 공고';
 }
@@ -269,6 +277,7 @@ document.addEventListener('click', async e => {
   const t = e.target.closest('button, .card');
   if (!t) return;
   if (t.dataset.tab) { tab = t.dataset.tab; if (tab === 'notices') await loadNotices(); render(); return; }
+  if (t.dataset.showall) { settings.showAll = !settings.showAll; await kvSet('settings', settings); render(); return; }
   if (t.dataset.filter) { settings.filter = t.dataset.filter; await save(); render(); return; }
   if (t.dataset.day !== undefined) {
     const d = +t.dataset.day;

@@ -21,6 +21,10 @@ jobs:
         env:
           ALIO_KEY: ${{ secrets.ALIO_KEY }}
         run: python scripts/fetch_alio.py
+      - name: 사람인 대기업 공고 받기
+        env:
+          SARAMIN_KEY: ${{ secrets.SARAMIN_KEY }}
+        run: python scripts/fetch_saramin.py
       - name: 바뀐 게 있으면 저장
         run: |
           git config user.name "notice-bot"

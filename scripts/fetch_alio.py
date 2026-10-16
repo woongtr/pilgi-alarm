@@ -73,6 +73,8 @@ def main():
         sn = it.get("recrutPblntSn", "")
         notices.append({
             "id": str(sn),
+            "source": "alio",
+            "group": "공공기관",
             "inst": inst,
             "title": it.get("recrutPbancTtl", ""),
             "start": ymd(it.get("pbancBgngYmd")),
@@ -83,11 +85,18 @@ def main():
             "hire": it.get("hireTypeNmLst") or "",    # 정규직 / 비정규직 등
             "people": it.get("recrutNope") or 0,
         })
+    mine = len(notices)
+    # 사람인(대기업) 공고는 그대로 둔다
+    try:
+        with open(OUT, encoding="utf-8") as f:
+            notices += [n for n in json.load(f).get("notices", []) if n.get("source") == "saramin"]
+    except (OSError, ValueError):
+        pass
     notices.sort(key=lambda n: n["start"], reverse=True)
     out = {"updated": datetime.now(KST).strftime("%Y-%m-%d %H:%M"), "total": len(raw), "notices": notices}
     with open(OUT, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=1)
-    print(f"전체 진행 공고 {len(raw)}건 중 관심 기관 {len(notices)}건 저장")
+    print(f"전체 진행 공고 {len(raw)}건 중 관심 기관 {mine}건 저장")
 
 
 if __name__ == "__main__":

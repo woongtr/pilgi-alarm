@@ -1,5 +1,5 @@
 // 오프라인 캐시 + 백그라운드 알림 확인
-const CACHE = 'pilgi-v2';
+const CACHE = 'pilgi-v4';
 const FILES = ['./', './index.html', './app.js', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 
 self.addEventListener('install', e => {
@@ -69,6 +69,9 @@ async function checkAndNotify() {
   await kvSet('sent', sent);
 }
 
+// 기간제·대체인력 등은 기본으로 숨김 (설정에서 '모든 공고 보기'로 변경)
+const isMinor = n => /비정규/.test(n.hire || '') || /(기간제|대체인력|대체 인력|위촉|계약직|체험형|육아휴직)/.test(n.title || '');
+
 // 새 공공기관 공고 알림 (GitHub Actions 가 매일 notices.json 갱신)
 async function checkNotices() {
   let data;
@@ -81,12 +84,14 @@ async function checkNotices() {
   await kvSet('notices', data);
   const seen = await kvGet('seenNotices');
   if (!seen) { await kvSet('seenNotices', list.map(n => n.id)); return; } // 첫 실행은 조용히
-  const fresh = list.filter(n => !seen.includes(n.id));
-  if (!fresh.length) return;
-  const title = fresh.length === 1 ? `새 공고 · ${fresh[0].inst}` : `새 공공기관 공고 ${fresh.length}건`;
+  const settings = (await kvGet('settings')) || {};
+  const fresh = list.filter(n => !seen.includes(n.id) && (settings.showAll || !isMinor(n)));
+  const unseenAll = list.filter(n => !seen.includes(n.id)).map(n => n.id);
+  if (!fresh.length) { if (unseenAll.length) await kvSet('seenNotices', [...seen, ...unseenAll]); return; }
+  const title = fresh.length === 1 ? `새 공고 · ${fresh[0].inst}` : `새 채용 공고 ${fresh.length}건`;
   const body = fresh.slice(0, 3).map(n => `${n.inst}: ${n.title} (~${n.end.slice(5)})`).join('\n');
   await self.registration.showNotification(title, { body, icon: 'icon-192.png', badge: 'icon-192.png', tag: 'notices', data: { tab: 'notices' } });
-  await kvSet('seenNotices', [...seen, ...fresh.map(n => n.id)]);
+  await kvSet('seenNotices', [...seen, ...unseenAll]);
 }
 
 async function checkAll() { await checkNotices(); await checkAndNotify(); }
