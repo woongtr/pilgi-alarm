@@ -1,7 +1,21 @@
 {
- "updated": "2026-10-20 08:59",
- "total": 456,
+ "updated": "2026-10-20 17:17",
+ "total": 471,
  "notices": [
+  {
+   "id": "306159",
+   "source": "alio",
+   "group": "공공기관",
+   "inst": "한국전력공사",
+   "title": "2026년 제3차 장애인 체험형 인턴 채용공고 [대구본부]",
+   "start": "2026-10-20",
+   "end": "2026-11-03",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306159",
+   "src": "http://recruit.kepco.co.kr/sangsi",
+   "kind": "신입",
+   "hire": "청년인턴(체험형)",
+   "people": 7
+  },
   {
    "id": "306032",
    "source": "alio",
