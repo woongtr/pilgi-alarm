@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-21 17:21",
- "total": 491,
+ "updated": "2026-10-22 08:45",
+ "total": 466,
  "notices": [
   {
    "id": "306159",
@@ -141,20 +141,6 @@
    "kind": "신입+경력",
    "hire": "비정규직",
    "people": 2
-  },
-  {
-   "id": "305774",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "코레일테크(주)",
-   "title": "2026년 제2차 일반직사원(경력직 및 채용형인턴) 채용 공고",
-   "start": "2026-10-07",
-   "end": "2026-10-21",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=305774",
-   "src": "https://korailtech.cairos.co.kr/korailtech/",
-   "kind": "신입+경력",
-   "hire": "정규직,청년인턴(채용형)",
-   "people": 19
   }
  ]
 }
