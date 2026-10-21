@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-20 17:17",
- "total": 471,
+ "updated": "2026-10-21 17:21",
+ "total": 491,
  "notices": [
   {
    "id": "306159",
@@ -15,6 +15,20 @@
    "kind": "신입",
    "hire": "청년인턴(체험형)",
    "people": 7
+  },
+  {
+   "id": "306127",
+   "source": "alio",
+   "group": "공공기관",
+   "inst": "국민건강보험공단 일산병원",
+   "title": "2026년도 의사직(전문계약직-소아청소년과(응급전담)) 채용 공고",
+   "start": "2026-10-20",
+   "end": "2026-11-03",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306127",
+   "src": "\thttps://nhimc.recruiter.co.kr/",
+   "kind": "경력",
+   "hire": "비정규직",
+   "people": 2
   },
   {
    "id": "306032",
@@ -141,34 +155,6 @@
    "kind": "신입+경력",
    "hire": "정규직,청년인턴(채용형)",
    "people": 19
-  },
-  {
-   "id": "305744",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "한국전력공사",
-   "title": "한국전력 럭비단 기간제 운동선수 채용공고",
-   "start": "2026-10-06",
-   "end": "2026-10-20",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=305744",
-   "src": "http://recruit.kepco.co.kr/sangsi",
-   "kind": "신입",
-   "hire": "비정규직",
-   "people": 2
-  },
-  {
-   "id": "305743",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "한국전력공사",
-   "title": "한국전력 육상단 기간제 운동선수 채용공고",
-   "start": "2026-10-06",
-   "end": "2026-10-20",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=305743",
-   "src": "http://recruit.kepco.co.kr/sangsi",
-   "kind": "신입",
-   "hire": "비정규직",
-   "people": 1
   }
  ]
 }
