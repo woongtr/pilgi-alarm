@@ -1,7 +1,21 @@
 {
- "updated": "2026-10-22 08:45",
- "total": 466,
+ "updated": "2026-10-23 08:42",
+ "total": 471,
  "notices": [
+  {
+   "id": "306259",
+   "source": "alio",
+   "group": "공공기관",
+   "inst": "한국전력공사",
+   "title": "2026년도 제2차 체험형 청년인턴 채용",
+   "start": "2026-10-22",
+   "end": "2026-11-05",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306259",
+   "src": "http://recruit.kepco.co.kr",
+   "kind": "신입",
+   "hire": "청년인턴(체험형)",
+   "people": 450
+  },
   {
    "id": "306159",
    "source": "alio",
@@ -87,34 +101,6 @@
    "people": 29
   },
   {
-   "id": "305828",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "한국전력공사",
-   "title": "기간제근로자(대체인력) 채용 공고 [경남본부 통영지사]",
-   "start": "2026-10-08",
-   "end": "2026-10-22",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=305828",
-   "src": "http://recruit.kepco.co.kr/sangsi",
-   "kind": "신입",
-   "hire": "비정규직",
-   "people": 1
-  },
-  {
-   "id": "305824",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "한국전력공사",
-   "title": "기간제근로자(대체인력) 채용공고 [경기본부]",
-   "start": "2026-10-08",
-   "end": "2026-10-22",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=305824",
-   "src": "http://recruit.kepco.co.kr/sangsi",
-   "kind": "신입",
-   "hire": "비정규직",
-   "people": 5
-  },
-  {
    "id": "305823",
    "source": "alio",
    "group": "공공기관",
@@ -127,20 +113,6 @@
    "kind": "신입",
    "hire": "비정규직",
    "people": 1
-  },
-  {
-   "id": "305816",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "한국철도공사",
-   "title": "2026년 제2차 한국철도공사 국가 R&D 위촉연구원 채용공고",
-   "start": "2026-10-08",
-   "end": "2026-10-22",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=305816",
-   "src": "http://info.korail.com/",
-   "kind": "신입+경력",
-   "hire": "비정규직",
-   "people": 2
   }
  ]
 }
