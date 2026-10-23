@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-23 17:20",
- "total": 486,
+ "updated": "2026-10-24 08:35",
+ "total": 469,
  "notices": [
   {
    "id": "306259",
@@ -99,20 +99,6 @@
    "kind": "신입+경력",
    "hire": "비정규직",
    "people": 29
-  },
-  {
-   "id": "305823",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "한국전력공사",
-   "title": "기간제근로자(대체인력) 채용공고[대구본부]",
-   "start": "2026-10-08",
-   "end": "2026-10-23",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=305823",
-   "src": "http://recruit.kepco.co.kr/sangsi",
-   "kind": "신입",
-   "hire": "비정규직",
-   "people": 1
   }
  ]
 }
