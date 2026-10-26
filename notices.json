@@ -1,7 +1,35 @@
 {
- "updated": "2026-10-26 07:51",
- "total": 475,
+ "updated": "2026-10-26 17:38",
+ "total": 497,
  "notices": [
+  {
+   "id": "306340",
+   "source": "alio",
+   "group": "공공기관",
+   "inst": "코레일유통(주)",
+   "title": "코레일유통(주) 2026년 시설관리직, 환경보안직, 육아휴직 대체 기간제 사원 채용공고",
+   "start": "2026-10-26",
+   "end": "2026-11-09",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306340",
+   "src": "https://www.korailretail.com/",
+   "kind": "신입",
+   "hire": "무기계약직,비정규직",
+   "people": 6
+  },
+  {
+   "id": "306339",
+   "source": "alio",
+   "group": "공공기관",
+   "inst": "국민건강보험공단",
+   "title": "2026년도 제3차 국민건강보험공단 전문인력 채용 공고",
+   "start": "2026-10-26",
+   "end": "2026-11-09",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306339",
+   "src": "http://www.nhis.or.kr/nhis/together/wbhaea02700m01.do?mode=view&articleNo=11014491",
+   "kind": "신입+경력",
+   "hire": "정규직",
+   "people": 15
+  },
   {
    "id": "306259",
    "source": "alio",
