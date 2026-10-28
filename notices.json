@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-27 17:44",
- "total": 486,
+ "updated": "2026-10-28 09:07",
+ "total": 477,
  "notices": [
   {
    "id": "306355",
@@ -99,20 +99,6 @@
    "kind": "신입+경력",
    "hire": "무기계약직",
    "people": 597
-  },
-  {
-   "id": "305874",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "한국전력공사",
-   "title": "2026년 하반기 한전 전력연구원 위촉연구원 채용공고",
-   "start": "2026-10-12",
-   "end": "2026-10-27",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=305874",
-   "src": "https://kepri.saramin.co.kr",
-   "kind": "신입+경력",
-   "hire": "비정규직",
-   "people": 29
   }
  ]
 }
