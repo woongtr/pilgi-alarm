@@ -1,6 +1,6 @@
 {
- "updated": "2026-10-29 18:35",
- "total": 534,
+ "updated": "2026-10-30 18:44",
+ "total": 517,
  "notices": [
   {
    "id": "306355",
@@ -85,20 +85,6 @@
    "kind": "경력",
    "hire": "비정규직",
    "people": 2
-  },
-  {
-   "id": "306032",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "코레일테크(주)",
-   "title": "2027년 제1차 공무직사원 채용 공고",
-   "start": "2026-10-15",
-   "end": "2026-10-29",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306032",
-   "src": "https://korailtech.cairos.co.kr/korailtech/",
-   "kind": "신입+경력",
-   "hire": "무기계약직",
-   "people": 597
   }
  ]
 }
