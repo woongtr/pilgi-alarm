@@ -1,7 +1,21 @@
 {
- "updated": "2026-11-02 08:59",
- "total": 494,
+ "updated": "2026-11-02 19:41",
+ "total": 544,
  "notices": [
+  {
+   "id": "306597",
+   "source": "alio",
+   "group": "공공기관",
+   "inst": "국민건강보험공단",
+   "title": "2026년도 하반기 국민건강보험공단 업무지원직 채용 공고",
+   "start": "2026-11-02",
+   "end": "2026-11-16",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306597",
+   "src": "http://www.nhis.or.kr/nhis/together/wbhaea02700m01.do?mode=view&articleNo=11014714&article.offset=0&articleLimit=10",
+   "kind": "신입+경력",
+   "hire": "무기계약직",
+   "people": 59
+  },
   {
    "id": "306549",
    "source": "alio",
