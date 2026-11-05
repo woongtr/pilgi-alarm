@@ -1,7 +1,21 @@
 {
- "updated": "2026-11-05 10:07",
- "total": 514,
+ "updated": "2026-11-05 19:29",
+ "total": 544,
  "notices": [
+  {
+   "id": "306750",
+   "source": "alio",
+   "group": "공공기관",
+   "inst": "코레일유통(주)",
+   "title": "코레일유통(주) 2026년 물류사업관련 공무직 및 기간제사원 채용공고",
+   "start": "2026-11-05",
+   "end": "2026-11-19",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306750",
+   "src": "https://www.korailretail.com",
+   "kind": "신입+경력",
+   "hire": "무기계약직,비정규직",
+   "people": 723
+  },
   {
    "id": "306723",
    "source": "alio",
