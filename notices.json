@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-05 19:29",
- "total": 544,
+ "updated": "2026-11-06 10:12",
+ "total": 510,
  "notices": [
   {
    "id": "306750",
@@ -113,20 +113,6 @@
    "kind": "신입+경력",
    "hire": "정규직",
    "people": 15
-  },
-  {
-   "id": "306259",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "한국전력공사",
-   "title": "2026년도 제2차 체험형 청년인턴 채용",
-   "start": "2026-10-22",
-   "end": "2026-11-05",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306259",
-   "src": "http://recruit.kepco.co.kr",
-   "kind": "신입",
-   "hire": "청년인턴(체험형)",
-   "people": 450
   }
  ]
 }
