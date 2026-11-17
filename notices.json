@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-17 12:15",
- "total": 503,
+ "updated": "2026-11-17 20:35",
+ "total": 534,
  "notices": [
   {
    "id": "306974",
@@ -43,6 +43,20 @@
    "kind": "경력",
    "hire": "정규직",
    "people": 1
+  },
+  {
+   "id": "306873",
+   "source": "alio",
+   "group": "공공기관",
+   "inst": "국민건강보험공단 일산병원",
+   "title": "2026년 11월 업무지원직 모집공고(사무직, 기능직)",
+   "start": "2026-11-17",
+   "end": "2026-12-01",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306873",
+   "src": "https://nhimc.recruiter.co.kr/appsite/company/index",
+   "kind": "신입",
+   "hire": "무기계약직",
+   "people": 18
   },
   {
    "id": "307056",
