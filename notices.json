@@ -1,7 +1,49 @@
 {
- "updated": "2026-11-16 19:46",
- "total": 541,
+ "updated": "2026-11-17 12:15",
+ "total": 503,
  "notices": [
+  {
+   "id": "306974",
+   "source": "alio",
+   "group": "공공기관",
+   "inst": "국민건강보험공단 일산병원",
+   "title": "2027년도 상반기 수련생(체험형 청년인턴) 모집공고",
+   "start": "2026-11-17",
+   "end": "2026-12-01",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306974",
+   "src": "https://nhimc.recruiter.co.kr",
+   "kind": "신입",
+   "hire": "청년인턴(체험형)",
+   "people": 22
+  },
+  {
+   "id": "306973",
+   "source": "alio",
+   "group": "공공기관",
+   "inst": "국민건강보험공단 일산병원",
+   "title": "2026년 11월 기간제근로자 모집공고(간호직, 보건직, 사무직, 기능직)",
+   "start": "2026-11-17",
+   "end": "2026-12-01",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306973",
+   "src": "https://nhimc.recruiter.co.kr",
+   "kind": "신입+경력",
+   "hire": "비정규직",
+   "people": 18
+  },
+  {
+   "id": "306972",
+   "source": "alio",
+   "group": "공공기관",
+   "inst": "국민건강보험공단 일산병원",
+   "title": "2027년 상반기 정규직(보건직-치과위생사) 모집공고",
+   "start": "2026-11-17",
+   "end": "2026-12-01",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=306972",
+   "src": "https://nhimc.recruiter.co.kr/appsite/company/index",
+   "kind": "경력",
+   "hire": "정규직",
+   "people": 1
+  },
   {
    "id": "307056",
    "source": "alio",
@@ -127,48 +169,6 @@
    "kind": "신입",
    "hire": "무기계약직",
    "people": 10
-  },
-  {
-   "id": "306597",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "국민건강보험공단",
-   "title": "2026년도 하반기 국민건강보험공단 업무지원직 채용 공고",
-   "start": "2026-11-02",
-   "end": "2026-11-16",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306597",
-   "src": "http://www.nhis.or.kr/nhis/together/wbhaea02700m01.do?mode=view&articleNo=11014714&article.offset=0&articleLimit=10",
-   "kind": "신입+경력",
-   "hire": "무기계약직",
-   "people": 59
-  },
-  {
-   "id": "306549",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "한국전력공사",
-   "title": "건설분야 기간제 근로자 채용공고 [HVDC건설본부]",
-   "start": "2026-11-02",
-   "end": "2026-11-16",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306549",
-   "src": "http://recruit.kepco.co.kr/sangsi/",
-   "kind": "신입",
-   "hire": "비정규직",
-   "people": 1
-  },
-  {
-   "id": "306355",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "중소기업은행",
-   "title": "2027년 동계 IBK기업은행 체험형 청년인턴 채용공고",
-   "start": "2026-10-27",
-   "end": "2026-11-16",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306355",
-   "src": "https://ibk.incruit.com",
-   "kind": "신입",
-   "hire": "청년인턴(체험형)",
-   "people": 390
   }
  ]
 }
