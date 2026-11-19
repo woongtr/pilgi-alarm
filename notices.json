@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18 20:17",
- "total": 543,
+ "updated": "2026-11-19 11:05",
+ "total": 542,
  "notices": [
   {
    "id": "306974",
@@ -169,20 +169,6 @@
    "kind": "신입",
    "hire": "비정규직",
    "people": 12
-  },
-  {
-   "id": "306468",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "중소기업은행",
-   "title": "2026년 하반기 2차 시간선택제 준정규직(장애·보훈) 채용공고",
-   "start": "2026-11-03",
-   "end": "2026-11-18",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306468",
-   "src": "http://ibk.incruit.com",
-   "kind": "신입",
-   "hire": "무기계약직",
-   "people": 10
   }
  ]
 }
