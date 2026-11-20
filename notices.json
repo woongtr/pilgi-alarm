@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-19 20:17",
- "total": 567,
+ "updated": "2026-11-20 10:55",
+ "total": 552,
  "notices": [
   {
    "id": "306974",
@@ -141,34 +141,6 @@
    "kind": "경력",
    "hire": "비정규직",
    "people": 4
-  },
-  {
-   "id": "306750",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "코레일유통(주)",
-   "title": "코레일유통(주) 2026년 물류사업관련 공무직 및 기간제사원 채용공고",
-   "start": "2026-11-05",
-   "end": "2026-11-19",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306750",
-   "src": "https://www.korailretail.com",
-   "kind": "신입+경력",
-   "hire": "무기계약직,비정규직",
-   "people": 723
-  },
-  {
-   "id": "306723",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "한국전력공사",
-   "title": "기간제근로자(대체인력) 채용공고[부산울산본부]",
-   "start": "2026-11-05",
-   "end": "2026-11-19",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306723",
-   "src": "http://recruit.kepco.co.kr/sangsi",
-   "kind": "신입",
-   "hire": "비정규직",
-   "people": 12
   }
  ]
 }
