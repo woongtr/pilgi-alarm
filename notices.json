@@ -1,7 +1,21 @@
 {
- "updated": "2026-11-25 12:50",
- "total": 551,
+ "updated": "2026-11-26 12:15",
+ "total": 569,
  "notices": [
+  {
+   "id": "307441",
+   "source": "alio",
+   "group": "공공기관",
+   "inst": "국민건강보험공단 일산병원",
+   "title": "2027년도 상반기 의과 전공의(레지던트 1년차) 모집 공고",
+   "start": "2026-11-25",
+   "end": "2026-12-04",
+   "url": "https://job.alio.go.kr/recruitview.do?idx=307441",
+   "src": "https://nhimc.recruiter.co.kr/career/jobs/135573",
+   "kind": "신입+경력",
+   "hire": "비정규직",
+   "people": 5
+  },
   {
    "id": "307280",
    "source": "alio",
@@ -127,34 +141,6 @@
    "kind": "신입",
    "hire": "비정규직",
    "people": 3
-  },
-  {
-   "id": "306824",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "국민건강보험공단 일산병원",
-   "title": "2026년도 의사직(임상교수) 채용 공고",
-   "start": "2026-11-11",
-   "end": "2026-11-25",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306824",
-   "src": "https://nhimc.recruiter.co.kr/",
-   "kind": "경력",
-   "hire": "비정규직",
-   "people": 2
-  },
-  {
-   "id": "306821",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "국민건강보험공단 일산병원",
-   "title": "2026년도 의사직(전문계약직) 채용 공고",
-   "start": "2026-11-11",
-   "end": "2026-11-25",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=306821",
-   "src": "https://nhimc.recruiter.co.kr/",
-   "kind": "경력",
-   "hire": "비정규직",
-   "people": 4
   }
  ]
 }
