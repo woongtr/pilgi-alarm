@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-27 20:52",
- "total": 610,
+ "updated": "2026-11-28 11:59",
+ "total": 577,
  "notices": [
   {
    "id": "307441",
@@ -113,20 +113,6 @@
    "kind": "신입",
    "hire": "청년인턴(체험형)",
    "people": 6
-  },
-  {
-   "id": "307013",
-   "source": "alio",
-   "group": "공공기관",
-   "inst": "한국전력공사",
-   "title": "기간제근로자(대체인력) 채용 공고 [경남본부]",
-   "start": "2026-11-13",
-   "end": "2026-11-27",
-   "url": "https://job.alio.go.kr/recruitview.do?idx=307013",
-   "src": "http://recruit.kepco.co.kr/sangsi",
-   "kind": "신입",
-   "hire": "비정규직",
-   "people": 2
   },
   {
    "id": "306826",
